@@ -1,4 +1,16 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Adopt Me Value Checker
+
+Live pet value checker for Adopt Me with multi-source aggregation, inventory management, and weekly updates tracking.
+
+## Features
+
+- Multi-source value checking (3 community sources)
+- Manual inventory management
+- Weekly pet updates with countdown
+- Confidence scoring for values
+- Responsive design
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
