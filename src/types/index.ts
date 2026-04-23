@@ -168,7 +168,7 @@ export interface PaginatedResponse<T> {
 export interface AuthUser {
   id: string;
   email: string;
-  createdAt: string;
+  createdAt?: string;
 }
 
 export interface AuthSession {
