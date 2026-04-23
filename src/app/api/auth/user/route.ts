@@ -17,8 +17,8 @@ export async function GET(request: NextRequest) {
       return NextResponse.json(response, { status: 401 });
     }
 
-    const response: ApiResponse<AuthUser> = {
-      data: user as AuthUser,
+    const response: ApiResponse<any> = {
+      data: user,
       success: true,
     };
 
