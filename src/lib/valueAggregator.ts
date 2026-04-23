@@ -83,6 +83,7 @@ export function aggregatePetValues(petValues: PetValue[]): AggregatedValue {
       sources: [],
       confidence: 'low',
       lastUpdated: new Date(),
+      communityValue: 0,
     };
   }
   
@@ -109,6 +110,7 @@ export function aggregatePetValues(petValues: PetValue[]): AggregatedValue {
     sources: petValues,
     confidence,
     lastUpdated,
+    communityValue: averageValue,
   };
 }
 

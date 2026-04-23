@@ -57,6 +57,7 @@ export interface AggregatedValue {
   sources: PetValue[];
   confidence: Confidence;
   lastUpdated: Date;
+  communityValue?: number;
 }
 
 export interface PetValueWithVariants {
