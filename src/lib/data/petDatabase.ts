@@ -1,0 +1,133 @@
+import { Pet, Rarity, PetType, PetStatus } from '@/types';
+
+// Comprehensive Adopt Me pet database with 100+ pets
+export const pets: Pet[] = [
+  // Legendary Pets - In Game
+  { id: 'shadow', name: 'Shadow Dragon', rarity: 'legendary', type: 'pet', status: 'retired', imageUrl: '/pets/shadow.png', releaseDate: '2019-10-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'bat-dragon', name: 'Bat Dragon', rarity: 'legendary', type: 'pet', status: 'retired', imageUrl: '/pets/bat-dragon.png', releaseDate: '2019-10-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'frost', name: 'Frost Dragon', rarity: 'legendary', type: 'pet', status: 'retired', imageUrl: '/pets/frost.png', releaseDate: '2019-12-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'owl', name: 'Owl', rarity: 'legendary', type: 'pet', status: 'retired', imageUrl: '/pets/owl.png', releaseDate: '2019-11-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'parrot', name: 'Parrot', rarity: 'legendary', type: 'pet', status: 'retired', imageUrl: '/pets/parrot.png', releaseDate: '2019-11-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'crow', name: 'Crow', rarity: 'legendary', type: 'pet', status: 'retired', imageUrl: '/pets/crow.png', releaseDate: '2019-11-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'evil-unicorn', name: 'Evil Unicorn', rarity: 'legendary', type: 'pet', status: 'retired', imageUrl: '/pets/evil-unicorn.png', releaseDate: '2019-10-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'arctic-reindeer', name: 'Arctic Reindeer', rarity: 'legendary', type: 'pet', status: 'retired', imageUrl: '/pets/arctic-reindeer.png', releaseDate: '2019-12-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'giraffe', name: 'Giraffe', rarity: 'legendary', type: 'pet', status: 'retired', imageUrl: '/pets/giraffe.png', releaseDate: '2019-07-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'turtle', name: 'Turtle', rarity: 'legendary', type: 'pet', status: 'retired', imageUrl: '/pets/turtle.png', releaseDate: '2020-02-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'kangaroo', name: 'Kangaroo', rarity: 'legendary', type: 'pet', status: 'retired', imageUrl: '/pets/kangaroo.png', releaseDate: '2020-02-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'queen-bee', name: 'Queen Bee', rarity: 'legendary', type: 'pet', status: 'in-game', imageUrl: '/pets/queen-bee.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'king-monkey', name: 'King Monkey', rarity: 'legendary', type: 'pet', status: 'retired', imageUrl: '/pets/king-monkey.png', releaseDate: '2020-05-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'griffin', name: 'Griffin', rarity: 'legendary', type: 'pet', status: 'in-game', imageUrl: '/pets/griffin.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'dragon', name: 'Dragon', rarity: 'legendary', type: 'pet', status: 'in-game', imageUrl: '/pets/dragon.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'unicorn', name: 'Unicorn', rarity: 'legendary', type: 'pet', status: 'in-game', imageUrl: '/pets/unicorn.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'golden-rat', name: 'Golden Rat', rarity: 'legendary', type: 'pet', status: 'retired', imageUrl: '/pets/golden-rat.png', releaseDate: '2020-01-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'golden-penguin', name: 'Golden Penguin', rarity: 'legendary', type: 'pet', status: 'in-game', imageUrl: '/pets/golden-penguin.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'diamond-dragon', name: 'Diamond Dragon', rarity: 'legendary', type: 'pet', status: 'in-game', imageUrl: '/pets/diamond-dragon.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'diamond-griffin', name: 'Diamond Griffin', rarity: 'legendary', type: 'pet', status: 'in-game', imageUrl: '/pets/diamond-griffin.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'diamond-unicorn', name: 'Diamond Unicorn', rarity: 'legendary', type: 'pet', status: 'in-game', imageUrl: '/pets/diamond-unicorn.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'albino-monkey', name: 'Albino Monkey', rarity: 'legendary', type: 'pet', status: 'retired', imageUrl: '/pets/albino-monkey.png', releaseDate: '2020-05-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'ninja-monkey', name: 'Ninja Monkey', rarity: 'legendary', type: 'pet', status: 'retired', imageUrl: '/pets/ninja-monkey.png', releaseDate: '2020-05-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'toys-monkey', name: 'Monkey King', rarity: 'legendary', type: 'pet', status: 'retired', imageUrl: '/pets/monkey-king.png', releaseDate: '2020-05-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'cerberus', name: 'Cerberus', rarity: 'legendary', type: 'pet', status: 'in-game', imageUrl: '/pets/cerberus.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'kitsune', name: 'Kitsune', rarity: 'legendary', type: 'pet', status: 'in-game', imageUrl: '/pets/kitsune.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'guardian-lion', name: 'Guardian Lion', rarity: 'legendary', type: 'pet', status: 'retired', imageUrl: '/pets/guardian-lion.png', releaseDate: '2021-02-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'phoenix', name: 'Phoenix', rarity: 'legendary', type: 'pet', status: 'in-game', imageUrl: '/pets/phoenix.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'goldhorn', name: 'Goldhorn', rarity: 'legendary', type: 'pet', status: 'retired', imageUrl: '/pets/goldhorn.png', releaseDate: '2021-07-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'diamond-ladybug', name: 'Diamond Ladybug', rarity: 'legendary', type: 'pet', status: 'in-game', imageUrl: '/pets/diamond-ladybug.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'peacock', name: 'Peacock', rarity: 'legendary', type: 'pet', status: 'in-game', imageUrl: '/pets/peacock.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'red-squirrel', name: 'Red Squirrel', rarity: 'legendary', type: 'pet', status: 'in-game', imageUrl: '/pets/red-squirrel.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'axolotl', name: 'Axolotl', rarity: 'legendary', type: 'pet', status: 'in-game', imageUrl: '/pets/axolotl.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'lamb', name: 'Lamb', rarity: 'legendary', type: 'pet', status: 'retired', imageUrl: '/pets/lamb.png', releaseDate: '2021-04-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'cow', name: 'Cow', rarity: 'rare', type: 'pet', status: 'retired', imageUrl: '/pets/cow.png', releaseDate: '2019-11-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'pig', name: 'Pig', rarity: 'rare', type: 'pet', status: 'retired', imageUrl: '/pets/pig.png', releaseDate: '2019-11-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'turkey', name: 'Turkey', rarity: 'ultra-rare', type: 'pet', status: 'retired', imageUrl: '/pets/turkey.png', releaseDate: '2019-11-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'llama', name: 'Llama', rarity: 'ultra-rare', type: 'pet', status: 'retired', imageUrl: '/pets/llama.png', releaseDate: '2019-11-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'polar-bear', name: 'Polar Bear', rarity: 'rare', type: 'pet', status: 'retired', imageUrl: '/pets/polar-bear.png', releaseDate: '2019-12-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'reindeer', name: 'Reindeer', rarity: 'rare', type: 'pet', status: 'retired', imageUrl: '/pets/reindeer.png', releaseDate: '2019-12-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'swan', name: 'Swan', rarity: 'rare', type: 'pet', status: 'retired', imageUrl: '/pets/swan.png', releaseDate: '2019-12-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'black-panther', name: 'Black Panther', rarity: 'uncommon', type: 'pet', status: 'retired', imageUrl: '/pets/black-panther.png', releaseDate: '2019-11-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'capybara', name: 'Capybara', rarity: 'uncommon', type: 'pet', status: 'retired', imageUrl: '/pets/capybara.png', releaseDate: '2019-11-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'meerkat', name: 'Meerkat', rarity: 'uncommon', type: 'pet', status: 'retired', imageUrl: '/pets/meerkat.png', releaseDate: '2019-11-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'pink-cat', name: 'Pink Cat', rarity: 'uncommon', type: 'pet', status: 'retired', imageUrl: '/pets/pink-cat.png', releaseDate: '2019-07-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'blue-dog', name: 'Blue Dog', rarity: 'uncommon', type: 'pet', status: 'retired', imageUrl: '/pets/blue-dog.png', releaseDate: '2019-07-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'wolf', name: 'Wolf', rarity: 'uncommon', type: 'pet', status: 'in-game', imageUrl: '/pets/wolf.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'chicken', name: 'Chicken', rarity: 'common', type: 'pet', status: 'in-game', imageUrl: '/pets/chicken.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'robin', name: 'Robin', rarity: 'common', type: 'pet', status: 'retired', imageUrl: '/pets/robin.png', releaseDate: '2019-12-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'drake', name: 'Drake', rarity: 'uncommon', type: 'pet', status: 'retired', imageUrl: '/pets/drake.png', releaseDate: '2019-11-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'silly-duck', name: 'Silly Duck', rarity: 'uncommon', type: 'pet', status: 'retired', imageUrl: '/pets/silly-duck.png', releaseDate: '2019-11-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'wolf', name: 'Wolf', rarity: 'uncommon', type: 'pet', status: 'in-game', imageUrl: '/pets/wolf.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'dingo', name: 'Dingo', rarity: 'uncommon', type: 'pet', status: 'in-game', imageUrl: '/pets/dingo.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'hedgehog', name: 'Hedgehog', rarity: 'ultra-rare', type: 'pet', status: 'retired', imageUrl: '/pets/hedgehog.png', releaseDate: '2019-10-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'flamingo', name: 'Flamingo', rarity: 'ultra-rare', type: 'pet', status: 'retired', imageUrl: '/pets/flamingo.png', releaseDate: '2019-07-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'lion', name: 'Lion', rarity: 'ultra-rare', type: 'pet', status: 'retired', imageUrl: '/pets/lion.png', releaseDate: '2019-07-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'shiba-inu', name: 'Shiba Inu', rarity: 'ultra-rare', type: 'pet', status: 'in-game', imageUrl: '/pets/shiba-inu.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'horse', name: 'Horse', rarity: 'ultra-rare', type: 'pet', status: 'in-game', imageUrl: '/pets/horse.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'panda', name: 'Panda', rarity: 'ultra-rare', type: 'pet', status: 'in-game', imageUrl: '/pets/panda.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'sloth', name: 'Sloth', rarity: 'ultra-rare', type: 'pet', status: 'in-game', imageUrl: '/pets/sloth.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'zombie-buffalo', name: 'Zombie Buffalo', rarity: 'ultra-rare', type: 'pet', status: 'retired', imageUrl: '/pets/zombie-buffalo.png', releaseDate: '2019-10-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'rat', name: 'Rat', rarity: 'rare', type: 'pet', status: 'retired', imageUrl: '/pets/rat.png', releaseDate: '2020-01-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'emu', name: 'Emu', rarity: 'rare', type: 'pet', status: 'in-game', imageUrl: '/pets/emu.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'monkey', name: 'Monkey', rarity: 'rare', type: 'pet', status: 'retired', imageUrl: '/pets/monkey.png', releaseDate: '2020-05-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'business-monkey', name: 'Business Monkey', rarity: 'rare', type: 'pet', status: 'retired', imageUrl: '/pets/business-monkey.png', releaseDate: '2020-05-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'toy-monkey', name: 'Toy Monkey', rarity: 'rare', type: 'pet', status: 'retired', imageUrl: '/pets/toy-monkey.png', releaseDate: '2020-05-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'snow-puma', name: 'Snow Puma', rarity: 'rare', type: 'pet', status: 'in-game', imageUrl: '/pets/snow-puma.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'beaver', name: 'Beaver', rarity: 'rare', type: 'pet', status: 'in-game', imageUrl: '/pets/beaver.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'rabbit', name: 'Rabbit', rarity: 'uncommon', type: 'pet', status: 'in-game', imageUrl: '/pets/rabbit.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'elephant', name: 'Elephant', rarity: 'rare', type: 'pet', status: 'in-game', imageUrl: '/pets/elephant.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'hyena', name: 'Hyena', rarity: 'rare', type: 'pet', status: 'in-game', imageUrl: '/pets/hyena.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'bunny', name: 'Bunny', rarity: 'common', type: 'pet', status: 'in-game', imageUrl: '/pets/bunny.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'crab', name: 'Crab', rarity: 'uncommon', type: 'pet', status: 'in-game', imageUrl: '/pets/crab.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'dolphin', name: 'Dolphin', rarity: 'uncommon', type: 'pet', status: 'in-game', imageUrl: '/pets/dolphin.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'fish', name: 'Fish', rarity: 'common', type: 'pet', status: 'in-game', imageUrl: '/pets/fish.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'seahorse', name: 'Seahorse', rarity: 'rare', type: 'pet', status: 'in-game', imageUrl: '/pets/seahorse.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'starfish', name: 'Starfish', rarity: 'rare', type: 'pet', status: 'in-game', imageUrl: '/pets/starfish.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'seal', name: 'Seal', rarity: 'common', type: 'pet', status: 'in-game', imageUrl: '/pets/seal.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'shark', name: 'Shark', rarity: 'rare', type: 'pet', status: 'in-game', imageUrl: '/pets/shark.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'stingray', name: 'Stingray', rarity: 'uncommon', type: 'pet', status: 'in-game', imageUrl: '/pets/stingray.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'walrus', name: 'Walrus', rarity: 'uncommon', type: 'pet', status: 'in-game', imageUrl: '/pets/walrus.png', isNeonAvailable: true, isMegaAvailable: true },
+  
+  // Eggs
+  { id: 'cracked-egg', name: 'Cracked Egg', rarity: 'common', type: 'egg', status: 'in-game', imageUrl: '/pets/cracked-egg.png', isNeonAvailable: false, isMegaAvailable: false },
+  { id: 'pet-egg', name: 'Pet Egg', rarity: 'common', type: 'egg', status: 'in-game', imageUrl: '/pets/pet-egg.png', isNeonAvailable: false, isMegaAvailable: false },
+  { id: 'royal-egg', name: 'Royal Egg', rarity: 'uncommon', type: 'egg', status: 'in-game', imageUrl: '/pets/royal-egg.png', isNeonAvailable: false, isMegaAvailable: false },
+  { id: 'farm-egg', name: 'Farm Egg', rarity: 'rare', type: 'egg', status: 'retired', imageUrl: '/pets/farm-egg.png', releaseDate: '2019-11-01', isNeonAvailable: false, isMegaAvailable: false },
+  { id: 'jungle-egg', name: 'Jungle Egg', rarity: 'rare', type: 'egg', status: 'retired', imageUrl: '/pets/jungle-egg.png', releaseDate: '2019-08-01', isNeonAvailable: false, isMegaAvailable: false },
+  { id: 'safari-egg', name: 'Safari Egg', rarity: 'rare', type: 'egg', status: 'retired', imageUrl: '/pets/safari-egg.png', releaseDate: '2019-07-01', isNeonAvailable: false, isMegaAvailable: false },
+  { id: 'aussie-egg', name: 'Aussie Egg', rarity: 'rare', type: 'egg', status: 'retired', imageUrl: '/pets/aussie-egg.png', releaseDate: '2020-02-01', isNeonAvailable: false, isMegaAvailable: false },
+  { id: 'fossil-egg', name: 'Fossil Egg', rarity: 'rare', type: 'egg', status: 'retired', imageUrl: '/pets/fossil-egg.png', releaseDate: '2020-10-01', isNeonAvailable: false, isMegaAvailable: false },
+  { id: 'ocean-egg', name: 'Ocean Egg', rarity: 'rare', type: 'egg', status: 'retired', imageUrl: '/pets/ocean-egg.png', releaseDate: '2021-04-01', isNeonAvailable: false, isMegaAvailable: false },
+  { id: 'mythic-egg', name: 'Mythic Egg', rarity: 'rare', type: 'egg', status: 'retired', imageUrl: '/pets/mythic-egg.png', releaseDate: '2021-08-01', isNeonAvailable: false, isMegaAvailable: false },
+  { id: 'christmas-egg', name: 'Christmas Egg', rarity: 'rare', type: 'egg', status: 'retired', imageUrl: '/pets/christmas-egg.png', releaseDate: '2019-12-01', isNeonAvailable: false, isMegaAvailable: false },
+  
+  // Recent legendary additions
+  { id: 'japan-egg', name: 'Japan Egg', rarity: 'legendary', type: 'egg', status: 'retired', imageUrl: '/pets/japan-egg.png', releaseDate: '2022-09-01', isNeonAvailable: false, isMegaAvailable: false },
+  { id: 'koi-carp', name: 'Koi Carp', rarity: 'legendary', type: 'pet', status: 'retired', imageUrl: '/pets/koi-carp.png', releaseDate: '2023-09-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'moon-bear', name: 'Moon Bear', rarity: 'legendary', type: 'pet', status: 'retired', imageUrl: '/pets/moon-bear.png', releaseDate: '2023-06-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'persian-cat', name: 'Persian Cat', rarity: 'legendary', type: 'pet', status: 'retired', imageUrl: '/pets/persian-cat.png', releaseDate: '2023-08-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'sugar-glider', name: 'Sugar Glider', rarity: 'legendary', type: 'pet', status: 'in-game', imageUrl: '/pets/sugar-glider.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'fallow-deer', name: 'Fallow Deer', rarity: 'legendary', type: 'pet', status: 'retired', imageUrl: '/pets/fallow-deer.png', releaseDate: '2022-12-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'harp-seal', name: 'Harp Seal', rarity: 'ultra-rare', type: 'pet', status: 'in-game', imageUrl: '/pets/harp-seal.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'husky', name: 'Husky', rarity: 'rare', type: 'pet', status: 'in-game', imageUrl: '/pets/husky.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'puffin', name: 'Puffin', rarity: 'ultra-rare', type: 'pet', status: 'retired', imageUrl: '/pets/puffin.png', releaseDate: '2022-12-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'sheep', name: 'Sheep', rarity: 'rare', type: 'pet', status: 'in-game', imageUrl: '/pets/sheep.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'corgi', name: 'Corgi', rarity: 'ultra-rare', type: 'pet', status: 'in-game', imageUrl: '/pets/corgi.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'robot', name: 'Robot', rarity: 'legendary', type: 'pet', status: 'in-game', imageUrl: '/pets/robot.png', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'ghost', name: 'Ghost', rarity: 'ultra-rare', type: 'pet', status: 'retired', imageUrl: '/pets/ghost.png', releaseDate: '2019-10-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'pumpkin', name: 'Pumpkin', rarity: 'rare', type: 'pet', status: 'retired', imageUrl: '/pets/pumpkin.png', releaseDate: '2019-10-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'shadow-bone', name: 'Shadowbone', rarity: 'legendary', type: 'pet', status: 'retired', imageUrl: '/pets/shadowbone.png', releaseDate: '2024-10-01', isNeonAvailable: true, isMegaAvailable: true },
+  { id: 'dire-stag', name: 'Dire Stag', rarity: 'legendary', type: 'pet', status: 'in-game', imageUrl: '/pets/dire-stag.png', isNeonAvailable: true, isMegaAvailable: true },
+];
+
+export const getPetById = (id: string): Pet | undefined => pets.find(p => p.id === id);
+
+export const getPetsByRarity = (rarity: Rarity): Pet[] => pets.filter(p => p.rarity === rarity);
+
+export const getPetsByStatus = (status: PetStatus): Pet[] => pets.filter(p => p.status === status);
+
+export const getPetsByType = (type: PetType): Pet[] => pets.filter(p => p.type === type);
+
+export const getNewestPets = (count: number = 5): Pet[] => {
+  return [...pets]
+    .filter(p => p.releaseDate)
+    .sort((a, b) => new Date(b.releaseDate!).getTime() - new Date(a.releaseDate!).getTime())
+    .slice(0, count);
+};
