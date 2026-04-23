@@ -61,6 +61,7 @@ export function PetSearch() {
       rarity: 'all',
       status: 'all',
       type: 'all',
+      variant: 'all',
     });
   };
 
