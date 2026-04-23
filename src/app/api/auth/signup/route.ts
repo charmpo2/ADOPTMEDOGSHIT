@@ -23,9 +23,9 @@ export async function POST(request: NextRequest) {
 
     if (error) throw error;
 
-    const response: ApiResponse<{ user: AuthUser; session: any }> = {
+    const response: ApiResponse<{ user: any; session: any }> = {
       data: {
-        user: data.user as AuthUser,
+        user: data.user,
         session: data.session,
       },
       success: true,
