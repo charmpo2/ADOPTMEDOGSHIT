@@ -9,7 +9,7 @@ import { calculateAggregatedValue } from '@/lib/utils/valueCalculator';
 import { rarityColors, rarityGradients, variantColors } from '@/lib/utils/rarityColors';
 import { formatNumber } from '@/lib/utils';
 import { useInventoryStore } from '@/lib/stores/inventoryStore';
-import { Plus, Check, Sparkles, Crown } from 'lucide-react';
+import { Plus, Check, Sparkles, Crown, Plane, Car } from 'lucide-react';
 // import { PetImage } from './PetImage';
 
 interface PetCardProps {
@@ -35,10 +35,15 @@ export function PetCard({ pet, showAddButton = true, compact = false }: PetCardP
   const rarityStyle = rarityColors[pet.rarity];
   const variantStyle = variantColors[variant];
 
-  const variantIcon = {
+  const variantIcon: Record<string, React.ReactNode> = {
     normal: null,
     neon: <Sparkles className="w-3 h-3" />,
     mega: <Crown className="w-3 h-3" />,
+    fly: <Plane className="w-3 h-3" />,
+    ride: <Car className="w-3 h-3" />,
+    mega_fly: <Crown className="w-3 h-3" />,
+    mega_ride: <Crown className="w-3 h-3" />,
+    mega_fly_ride: <Crown className="w-3 h-3" />,
   };
 
   return (
