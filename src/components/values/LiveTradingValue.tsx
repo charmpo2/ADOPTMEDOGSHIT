@@ -86,21 +86,13 @@ export function LiveTradingValue({ value, showLive = true }: LiveTradingValuePro
             </div>
           </div>
           
-          {/* Variant Badge */}
-          <div className={`px-3 py-1 rounded-lg text-sm font-semibold ${
-            value.variant === 'mega' ? 'bg-amber-100 text-amber-700' :
-            value.variant === 'neon' ? 'bg-cyan-100 text-cyan-700' :
-            'bg-gray-100 text-gray-700'
-          }`}>
-            {value.variant.charAt(0).toUpperCase() + value.variant.slice(1)}
-          </div>
         </div>
 
         {/* Source Breakdown */}
         <div className="space-y-2 pt-3 border-t border-gray-100">
-          <SourceRow label="Elvebredd" value={value.sources.elvebredd} />
-          <SourceRow label="GG Values" value={value.sources.ggvalues} />
-          <SourceRow label="AMTV" value={value.sources.amtv} />
+          {value.sources && value.sources.map((source, index) => (
+            <SourceRow key={index} label={source.source} value={source.value} />
+          ))}
         </div>
 
         {/* Variance Info */}
