@@ -82,14 +82,5 @@ export async function GET(request: NextRequest) {
   }
 }
 
-// For Vercel Cron Jobs, add this to vercel.json:
-/*
-{
-  "crons": [
-    {
-      "path": "/api/cron/refresh-values",
-      "schedule": "*/5 * * * *"
-    }
-  ]
-}
-*/
+// For Vercel Cron Jobs, add this to vercel.json
+// See README for cron configuration
