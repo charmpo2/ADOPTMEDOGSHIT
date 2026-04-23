@@ -146,7 +146,7 @@ function BackpackItem({ item, onRemove, onUpdateQuantity }: BackpackItemProps) {
 
         {/* Value */}
         <p className="text-sm font-mono font-bold text-gray-700 mt-2">
-          {formatNumber(item.currentValue.communityValue * item.quantity)}
+          {formatNumber(item.currentValue.averageValue * item.quantity)}
         </p>
 
         {/* Quantity Controls */}
