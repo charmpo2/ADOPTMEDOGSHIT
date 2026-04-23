@@ -28,7 +28,7 @@ export function LiveTradingValue({ value, showLive = true }: LiveTradingValuePro
     return () => clearInterval(interval);
   }, [showLive]);
 
-  const variance = value.max - value.min;
+  const variance = value.maxValue - value.minValue;
   const variancePercent = (variance / value.communityValue) * 100;
   
   const getTrend = () => {
@@ -108,7 +108,7 @@ export function LiveTradingValue({ value, showLive = true }: LiveTradingValuePro
           <div className="flex items-center justify-between text-xs">
             <span className="text-gray-500">Variance Range</span>
             <span className="font-mono text-gray-700">
-              {formatNumber(value.min)} - {formatNumber(value.max)}
+              {formatNumber(value.minValue)} - {formatNumber(value.maxValue)}
             </span>
           </div>
           <div className="flex items-center justify-between text-xs mt-1">
