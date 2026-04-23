@@ -29,7 +29,7 @@ export function LiveTradingValue({ value, showLive = true }: LiveTradingValuePro
   }, [showLive]);
 
   const variance = value.maxValue - value.minValue;
-  const variancePercent = (variance / value.communityValue) * 100;
+  const variancePercent = (variance / (value.communityValue ?? value.averageValue)) * 100;
   
   const getTrend = () => {
     if (variancePercent < 5) return { icon: Minus, color: 'text-gray-500', label: 'Stable' };
