@@ -105,7 +105,7 @@ export function PetCard({ pet, showAddButton = true, compact = false }: PetCardP
           <div>
             <div className="text-xs text-gray-500">Community Value</div>
             <div className="text-lg font-bold font-mono text-gray-900">
-              {formatNumber(aggregatedValue.communityValue)}
+              {formatNumber(aggregatedValue.communityValue ?? aggregatedValue.averageValue)}
             </div>
           </div>
           
