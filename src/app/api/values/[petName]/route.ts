@@ -6,10 +6,10 @@ import { AggregatedValue, ApiResponse } from '@/types';
 // GET /api/values/[petName] - Get aggregated value for a specific pet
 export async function GET(
   request: NextRequest,
-  { params }: { params: { petName: string } }
+  { params }: { params: Promise<{ petName: string }> }
 ) {
   try {
-    const { petName } = params;
+    const { petName } = await params;
     const decodedPetName = decodeURIComponent(petName);
 
     const petValues = await fetchPetValues(decodedPetName);

@@ -5,10 +5,10 @@ import { Inventory, ApiResponse } from '@/types';
 // GET /api/inventory/[id] - Get a specific inventory with items
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = params;
+    const { id } = await params;
     const { data: { user }, error: authError } = await supabase.auth.getUser();
     
     if (authError || !user) {
@@ -73,10 +73,10 @@ export async function GET(
 // PUT /api/inventory/[id] - Update inventory details
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = params;
+    const { id } = await params;
     const { data: { user }, error: authError } = await supabase.auth.getUser();
     
     if (authError || !user) {
@@ -141,10 +141,10 @@ export async function PUT(
 // DELETE /api/inventory/[id] - Delete an inventory
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = params;
+    const { id } = await params;
     const { data: { user }, error: authError } = await supabase.auth.getUser();
     
     if (authError || !user) {

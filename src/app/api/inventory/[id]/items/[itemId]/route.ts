@@ -5,10 +5,10 @@ import { InventoryItem, ApiResponse } from '@/types';
 // PUT /api/inventory/[id]/items/[itemId] - Update an inventory item
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string; itemId: string } }
+  { params }: { params: Promise<{ id: string; itemId: string }> }
 ) {
   try {
-    const { id, itemId } = params;
+    const { id, itemId } = await params;
     const { data: { user }, error: authError } = await supabase.auth.getUser();
     
     if (authError || !user) {
@@ -75,10 +75,10 @@ export async function PUT(
 // DELETE /api/inventory/[id]/items/[itemId] - Delete an inventory item
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string; itemId: string } }
+  { params }: { params: Promise<{ id: string; itemId: string }> }
 ) {
   try {
-    const { id, itemId } = params;
+    const { id, itemId } = await params;
     const { data: { user }, error: authError } = await supabase.auth.getUser();
     
     if (authError || !user) {

@@ -5,10 +5,10 @@ import { InventoryItem, ApiResponse } from '@/types';
 // GET /api/inventory/[id]/items - Get all items in an inventory
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = params;
+    const { id } = await params;
     const { data: { user }, error: authError } = await supabase.auth.getUser();
     
     if (authError || !user) {
@@ -68,10 +68,10 @@ export async function GET(
 // POST /api/inventory/[id]/items - Add an item to inventory
 export async function POST(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = params;
+    const { id } = await params;
     const { data: { user }, error: authError } = await supabase.auth.getUser();
     
     if (authError || !user) {
