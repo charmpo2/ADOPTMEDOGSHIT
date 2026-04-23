@@ -71,7 +71,7 @@ export function LiveTradingValue({ value, showLive = true }: LiveTradingValuePro
         <div className="flex items-end justify-between mb-3">
           <div>
             <div className="text-3xl font-bold font-mono text-gray-900">
-              {formatNumber(value.communityValue)}
+              {formatNumber(value.communityValue ?? value.averageValue)}
             </div>
             <div className="flex items-center gap-2 mt-1">
               <div className={`flex items-center gap-1 text-xs font-medium ${trend.color}`}>

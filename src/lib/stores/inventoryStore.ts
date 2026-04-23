@@ -107,7 +107,7 @@ export const useInventoryStore = create<InventoryState>()(
 
       getTotalValue: () => {
         return get().getItemsWithPets().reduce((total, item) => {
-          return total + item.currentValue.communityValue * item.quantity;
+          return total + (item.currentValue.communityValue ?? item.currentValue.averageValue) * item.quantity;
         }, 0);
       },
 
